@@ -44,6 +44,13 @@
 }
 
 
+@media (max-width:722px) {
+    .landing {
+    width: 350px;
+    left: 75px;
+    }    
+}
+
 
 /* Start Header */
 
@@ -129,11 +136,11 @@ header .cont a:hover {
     z-index: 1;
 }
 
-@media (max-width:722px) {
+/* @media (max-width:722px) {
     .landing .overlay {
         
     }
-}
+} */
 /*End Header */
 
 /* Start About  */
