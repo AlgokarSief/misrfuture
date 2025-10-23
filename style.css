@@ -99,9 +99,7 @@ header .cont a:hover {
     border-bottom: 2px solid var(--sec_color);
 }
 
-/* @media (max-width: 992px;) {
-    
-} */
+
 
 @media (max-width:722px) {
     header .cont a {
@@ -136,11 +134,7 @@ header .cont a:hover {
     z-index: 1;
 }
 
-/* @media (max-width:722px) {
-    .landing .overlay {
-        
-    }
-} */
+
 /*End Header */
 
 /* Start About  */
