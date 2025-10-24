@@ -327,6 +327,36 @@ p {
     height: 100%;
 }
 
+/* Start_Rule section */
+.rule {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    margin: 0 50px;
+}
+
+.rule .head{
+    font-size: 22px;
+    color: var(--parimary-color);
+    text-align: center;
+    border-bottom: 2px solid var(--sec_color);
+    padding-right: 2px;   
+}
+
+.rule h1 {
+    font-size: 24px;
+    color: var(--parimary-color);
+    text-align: center;
+    border-bottom: 2px solid var(--sec_color);
+    padding-right: 2px;   
+}
+
+.text_1 p {
+    font-size: 20px;
+    text-align: start;
+    padding-right: 10px;
+}
+/* End_Rule section */
+
 /* GOV Section */
 
 .gov {
