@@ -415,7 +415,7 @@ p {
 .button{
     display: inline-block;
     padding: 10px 24px;
-    background: var(--parimary-colors);
+    background: var(--sec_color);
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -424,7 +424,7 @@ p {
     transition: background 0.2s, transform 0.06s;
 }
 .button:hover{
-    background:var(---sec_color);
+    background:#800000;
     color: white;
 }
 .button:active{transform:translateY(1px)}
@@ -463,7 +463,7 @@ p {
   .social_icon a {
     left: -125px; 
   } 
-}r
+}
 
 /* contact */
 .contact p {
@@ -527,6 +527,71 @@ p {
 }
 
 .button:hover {
-    background: #005fa3;
+    background: #800000;
     color: white;
 }
+
+/* ===== Responsive + visual fixes ===== */
+html, body { overflow-x: hidden; max-width: 100%; }
+img { max-width: 100%; }
+.site-footer p { color: #dfeee7 !important; }
+.social_icon { display:flex; justify-content:center; gap:12px; }
+.social_icon a { left: 0 !important; position: static !important; }
+.card-img { height: 100%; object-fit: contain; }
+.card-media { background: #f4f4f4; display:flex; align-items:center; justify-content:center; }
+.card-media img[src]:-moz-broken { display:none; }
+
+@media (max-width: 722px) {
+    .landing { width: auto !important; left: auto !important; margin: 0 12px; padding: 60px 0; border-radius: 12px; }
+    .landing .reg { padding: 24px 16px; }
+    .landing .reg h1 { font-size: 1.6rem; }
+    .hero_links .button { min-width: 0; width: 80%; margin: 6px 0; }
+
+    header .container { flex-direction: row !important; flex-wrap: wrap; justify-content: center; align-items: center !important; gap: 4px; padding: 8px 12px; }
+    .site-header .logo { display: block !important; width: 56px; margin: 0; padding: 4px; }
+    .main-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 10px; }
+    .main-nav a { margin: 0; font-size: 13px; padding: 4px 2px; }
+    header .cont a { display: none; }
+
+    .about { padding-top: 24px; padding-bottom: 40px; }
+    .about .about-content { margin-top: 24px; }
+    .contianrt-about { padding: 0 16px; }
+    .about .about-content .image img { width: 100%; height: auto; margin: 0 0 16px 0; }
+    .about .about-content .text { margin: 0; min-width: 0; }
+    .about .about-content .text p { font-size: 16px; text-align: center; }
+    .special-heading { font-size: 22px; margin-right: 0; }
+
+    .container { padding: 16px; }
+    .manger img { width: 120px; height: 140px; margin: 6px; }
+    .grid { grid-template-columns: 1fr; }
+    .card-media { height: 160px; }
+
+    .rule { margin: 0 8px; padding-top: 24px; padding-bottom: 40px; }
+    .rule h1 { font-size: 20px; }
+    .text_1 p { font-size: 16px; padding-right: 0; }
+    .container p { font-size: 16px; }
+    .contact p { text-align: center; }
+    .register form { padding: 12px; }
+    .form-row input, .form-row select { font-size: 16px; padding: 10px; }
+    .modal { padding: 12px; }
+}
+@media (max-width: 360px) {
+    .main-nav a { font-size: 12px; }
+    .manger img { width: 104px; height: 124px; }
+}
+
+/* ===== Mobile header (hamburger) ===== */
+.menu-toggle, .nav-register { display: none; }
+@media (max-width: 722px) {
+    header { position: sticky; top: 0; z-index: 50; }
+    header .container { flex-direction: row-reverse !important; flex-wrap: nowrap !important; justify-content: space-between !important; align-items: center !important; padding: 6px 16px !important; position: relative; }
+    .site-header .logo { width: 48px; padding: 2px; }
+    .menu-toggle { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 0; border-radius: 10px; background: var(--sec_color); color: #fff; font-size: 20px; cursor: pointer; }
+    .site-header .nav { position: absolute; top: 100%; left: 0; right: 0; }
+    .main-nav { display: none !important; flex-direction: column; background: #fff; margin: 6px 12px 0; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,.18); overflow: hidden; }
+    .main-nav.open { display: flex !important; }
+    .main-nav a { margin: 0 !important; padding: 14px 18px !important; font-size: 16px !important; text-align: right; border-bottom: 1px solid #eee; color: #25272c; }
+    .main-nav a:hover { border-bottom: 1px solid #eee; background: #f7f0f2; }
+    .main-nav .nav-register { display: block; background: var(--sec_color); color: #fff; text-align: center; border-bottom: 0; }
+}
+@media (max-width: 722px) { header .cont { display: none; } }
