@@ -14,12 +14,14 @@
     <header class="site-header">
         <div class="container">
                 <a href="#hero"><img class="logo" src="img/logo.png" alt=""></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="القائمة" aria-expanded="false" aria-controls="mainNav"><i class="fa-solid fa-bars"></i></button>
             <div class="nav">
-                <nav class="main-nav" aria-label="التنقل الرئيسي">
+                <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
                     <a href="index.html">الصفحة الرئسية</a>
                     <a href="#about">من نحن</a>
                     <a href="#programs">مبادارات</a>
                     <a href="#register">تواصل معانا</a>
+                    <a href="#contact" class="nav-register">سجل الان</a>
                 </nav>
             </div>
             <div class="cont">
@@ -219,12 +221,12 @@
                          <a href="programs/yuomelyatem.html"><div class="card-actions"><button class="button small open-details">اقرأ المزيد</button></div></a>
                     </div>
                 </article>
-                <article class="card program-card" data-title="مبادرة تمكين الكفيف ثقاقيا" data-desc=".">
+                <article class="card program-card" data-title="مبادرة تمكين الكفيف ثقافيا" data-desc=".">
                     <div class="card-media">
-                        <img src="img/logo_16.png" alt="مبادرة تمكين الكفيف ثقاقيا" class="card-img">
+                        <img src="img/logo_16.png" alt="مبادرة تمكين الكفيف ثقافيا" class="card-img">
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">مبادرة تمكين الكفيف ثقاقيا</h3>
+                        <h3 class="card-title">مبادرة تمكين الكفيف ثقافيا</h3>
                         <p class="card-text">معلومات عن المبادره.</p>
                          <a href="programs/tamkenelkafef.html"><div class="card-actions"><button class="button small open-details">اقرأ المزيد</button></div></a>
                     </div>
@@ -316,10 +318,6 @@
                     <select id="program" name="program" required>
                         <option value="">-- اختر --</option>
                         <option>تكنولوجيا المعلومات</option>
-                        <option>تكنولوجيا المعلومات</option>
-                        <option>تكنولوجيا المعلومات</option>
-                        <option>تكنولوجيا المعلومات</option>
-                        <option>تكنولوجيا المعلومات</option>
                         <option>حرفي</option>
                         <option>ريادة الأعمال</option>
                     </select>
@@ -353,6 +351,15 @@
     <script>
         // تهيئة سنة الفوتر
         document.getElementById('year').textContent = new Date().getFullYear();
+        // قائمة الموبايل
+        (function(){
+            var t=document.getElementById('menuToggle'), n=document.getElementById('mainNav');
+            if(!t||!n) return;
+            t.addEventListener('click', function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded', o); t.querySelector('i').className = o ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'; });
+            n.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ n.classList.remove('open'); t.setAttribute('aria-expanded','false'); t.querySelector('i').className='fa-solid fa-bars'; }); });
+        })();
+        // إخفاء الصور المكسورة
+        document.querySelectorAll('.card-img').forEach(function(i){ i.addEventListener('error', function(){ i.parentNode.style.display='none'; }); if(i.complete && i.naturalWidth===0){ i.parentNode.style.display='none'; } });
 
         // تعامل بسيط مع نموذج التسجيل (mock)
         document.getElementById('registerForm').addEventListener('submit', function(e){
@@ -378,7 +385,7 @@
                 var modalTitle = document.getElementById('modalTitle');
                 var modalDesc = document.getElementById('modalDesc');
                 var closeBtn = modal.querySelector('.modal-close');
-                function openModal(title, ){
+                function openModal(title, desc){
                     modalTitle.textContent = title;
                     modalDesc.textContent = desc;
                     modal.setAttribute('aria-hidden', 'false');
