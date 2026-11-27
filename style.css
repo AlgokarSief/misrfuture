@@ -595,3 +595,6 @@ img { max-width: 100%; }
     .main-nav .nav-register { display: block; background: var(--sec_color); color: #fff; text-align: center; border-bottom: 0; }
 }
 @media (max-width: 722px) { header .cont { display: none; } }
+
+.map-link { color: inherit; text-decoration: underline; }
+.map-link:hover { opacity: .8; }
