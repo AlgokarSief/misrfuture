@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300..800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans Arabic',sans-serif;background:#f6f4f5;color:#25272c;line-height:1.9}
+.hero{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;text-align:center;padding:56px 20px 90px;position:relative;border-radius:0 0 40px 40px}
+.hero .back{position:absolute;top:18px;right:18px;color:#fff;text-decoration:none;background:rgba(255,255,255,.18);padding:6px 16px;border-radius:999px;font-size:.95rem}
+.hero-icon{width:84px;height:84px;margin:0 auto 14px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:2.2rem;box-shadow:0 0 0 8px rgba(255,255,255,.12)}
+.org{opacity:.85;font-size:.95rem}
+.hero h1{font-size:clamp(1.6rem,5vw,2.6rem);font-weight:800;line-height:1.5}
+.wrap{max-width:860px;margin:-46px auto 40px;padding:0 16px;position:relative;z-index:2}
+.block{background:#fff;border-radius:20px;padding:22px;margin-bottom:18px;box-shadow:0 6px 22px rgba(0,0,0,.07);border-top:5px solid var(--a)}
+.sec-title{color:var(--a);font-size:1.25rem;margin-bottom:12px}
+.sec-title i{font-size:.7rem;margin-left:6px;color:var(--b)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tile{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--b) 14%,#fff),#fff);border:1px solid color-mix(in srgb,var(--b) 35%,#fff);border-radius:14px;padding:14px 16px;font-weight:600}
+.tile i{flex:none;width:38px;height:38px;border-radius:50%;background:var(--a);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.para{background:color-mix(in srgb,var(--b) 8%,#fff);border-right:4px solid var(--b);border-radius:12px;padding:14px 18px;margin-top:12px}
+.tiles+.para{margin-top:14px}
+.contact{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border-radius:20px;padding:22px;margin-bottom:18px}
+.contact h2{font-size:1.2rem;margin-bottom:10px}
+.crow{display:flex;gap:12px;align-items:center;padding:6px 0}
+.crow i{flex:none;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.crow span{word-break:break-word}
+.foot{text-align:center;margin-top:24px}
+.btn{display:inline-block;background:var(--a);color:#fff;text-decoration:none;padding:12px 28px;border-radius:999px;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+@media(max-width:480px){.hero{padding:60px 16px 80px}.block{padding:16px}}
