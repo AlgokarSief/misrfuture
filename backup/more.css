@@ -1,0 +1,236 @@
+/* more.css */
+/* Rule */
+:root {
+    --parimary-color: black;
+    --sec_color: #800000;
+    --third_color:#072a1c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* End Rule */
+/* Example CSS styles */
+
+
+/* h1, h2, h3 {
+    color: #333;
+} */
+
+/* a {
+    color: #0078d4;
+    text-decoration: none;
+} */
+
+/* a:hover {
+    text-decoration: underline;
+} */
+/* End */
+/* Start Header */
+header {
+    background-color: white;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 10px var(--sec_color);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.site-header .logo{
+    width: 100px;
+    height: auto;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    margin-right: 20px;
+}
+
+.main-nav a {
+    margin: 0 12px;
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 24px;
+    border-radius: 24px;
+}
+
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+header .cont a {
+    text-decoration: none;
+    color: white;
+    margin: 0 12px;
+    background-color: var(--sec_color);
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+header .cont a:hover {
+    background-color: #800000;
+    color: white;
+}
+
+.main-nav a {
+    color: black;
+    font-weight: 600;
+}
+.main-nav a:hover {
+    border-bottom: 2px solid var(--sec_color);
+}
+
+@media (max-width:722px) {
+    header .cont a {
+        display: none;
+    }
+
+    .main-nav a  {
+        font-size: 20px;
+        color: #0078d4;
+    }
+}
+
+/* End Header */
+
+h1 {
+    color: #a6a6a6;
+    margin-bottom: 16px;
+    text-align: justify;
+    font-size: 2rem;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.num {
+    color: var(--parimary-color);
+    margin: 16px;
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 16px;
+}
+
+.back-but {
+    text-align: center;
+}
+
+.back {
+    display: inline-block;
+    margin: 16px;
+    padding: 8px 16px;
+    background-color: var(--parimary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    align-items: center;
+}
+
+
+/* تحسين مظهر الصورة في more.html */
+.detail-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 18px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    /* box-shadow: 0 8px 22px rgba(6,28,20,0.12); */
+    position: relative;
+    aspect-ratio: 16/9;
+}
+.detail-image img{
+    width:53%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 360ms cubic-bezier(.2,.9,.2,1),filter 360ms;
+}
+
+.detail-image1 img{
+    width:53%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 360ms cubic-bezier(.2,.9,.2,1),filter 360ms;
+}
+
+.detail-image::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.12) 100%); */
+    pointer-events: none;
+}
+.detail-image:hover img{ transform: scale(1.04); filter: contrast(1.03); }
+
+.detail-image1:hover img{ transform: scale(1.04); filter: contrast(1.03); }
+
+/* تهيئة footer social icons لو لم يتم تعريفها في style.css */
+.site-footer .social_icon{ display:flex; gap:12px; justify-content:center; align-items:center; margin-top:12px }
+.site-footer .social_icon a{ 
+    width:44px;
+    height:44px;
+    border-radius:50%; 
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center; 
+    background:#f1f1f1; 
+    color:var(--parimary-color);
+    text-decoration:none 
+}
+
+.site-footer .social_icon a:hover{ 
+    background:var(--parimary-color); 
+
+/* معرض صور عمودي */
+.detail-gallery{ max-width:900px; margin:14px auto 28px; display:flex; flex-direction:column; gap:18px }
+.detail-gallery .detail-image{ width:100% }
+.detail-gallery .detail-image img{ border-radius:10px }
+
+@media (max-width:600px){
+    .detail-gallery{ padding:0 12px }
+}
+}
+
+/* Start Footar */
+footer {
+    position: relative;
+}
+.site-footer {
+    background-color:var(--parimary-color);
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 32px;
+    top: 480px;
+}
+
+.site-footer .social_icon a:hover{ 
+    /* background:var(--sec_color);  */
+    color:black; 
+    transform:translateY(-2px); 
+}
+.site-footer .social_icon a.face:hover {
+    background-color: #0078d4;
+}
+
+.site-footer .social_icon a.whats:hover {
+    background-color: #0b5a3c;
+}
+
+/* End Footar */
