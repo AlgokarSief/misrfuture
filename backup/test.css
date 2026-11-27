@@ -1,0 +1,139 @@
+/* Rule */
+:root {
+    --parimary-color: black;
+    --sec_color: #800000;
+    --third_color:#072a1c;
+}    
+/* End Rule */
+/* Example CSS styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Start Header */
+header {
+    background-color: white;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 10px var(--sec_color);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 24px;
+    border-radius: 24px;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+header .cont a {
+    text-decoration: none;
+    color: white;
+    margin: 0 12px;
+    background-color: var(--sec_color);
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+@media (max-width:722px) {
+    header .cont a {
+        display: none;
+    }
+}
+
+header .cont a:hover {
+    background-color: #800000;
+    color: white;
+}
+
+.main-nav a {
+    color: black;
+    font-weight: 600;
+}
+.main-nav a:hover {
+    border-bottom: 2px solid var(--sec_color);
+}
+
+.site-header .logo {
+    width: 100px;
+    height: auto;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    margin-right: 20px; /* لو RTL */
+}
+.main-nav a{
+    margin-left: 14px;
+}
+
+/* End Header */
+
+/* body */
+.num {
+    font-size: large;
+    color: var(--parimary-color);
+    border-right: 5px solid red;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.back-but {
+    text-align: center;
+}
+
+.back {
+    display: inline-block;
+    margin: 16px;
+    padding: 8px 16px;
+    background-color: var(--parimary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    align-items: center;
+}
+.back:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+/* body */
+
+/* Start Footer */
+footer {
+    position: relative;
+}
+.site-footer {
+    background-color:var(--parimary-color);
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 32px;
+    top: 480px;
+}
+
+.site-footer .social_icon a:hover{ 
+    /* background:var(--sec_color);  */
+    color:black; 
+    transform:translateY(-2px); 
+}
+.site-footer .social_icon a.face:hover {
+    background-color: #0078d4;
+}
+
+.site-footer .social_icon a.whats:hover {
+    background-color: #0b5a3c;
+}
+/* Start Footer */
